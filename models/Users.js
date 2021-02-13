@@ -19,6 +19,25 @@ module.exports = (sequelize, DataTypes) => {
     googleId: {
       type: DataTypes.STRING,
       allowNull: false,
+      unique: true,
+      validate: {
+        notEmpty: true,
+      },
+    },
+
+    channelName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        notEmpty: true,
+      },
+    },
+
+    profilePictureUrl: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
       validate: {
         notEmpty: true,
       },
